@@ -1,0 +1,15 @@
+
+{% extends 'index.html' %}
+{% block body %}
+      <div class="text">
+        <h1>Hello,</h1>
+        <h1>My Name is</h1>
+        <h1>Jadhav Samadhan</h1>
+        <button>PORTFOLIO</button>
+      </div>
+        <div class="image-wrapper">
+            <img src="{{ url_for('static', filename='img/profileimg.png') }}"  class="rectangle-image">
+        </div>
+
+    
+{% endblock %}

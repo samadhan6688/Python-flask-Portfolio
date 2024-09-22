@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block body %}
+<body>
+
+    <h5>PDF Viewer</h5>
+    
+    <div class="button-container">
+        <button class="pdf-button" onclick="displayPDF('static/css/Copyright.pdf')">Copright of Project</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/acc.pdf')">Data Analytics by Accentucer</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/pwc.pdf')">Power BI by Pwc</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/internship.pdf')">Web developement Internship</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/google.pdf')">Google Analytics</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/micro.pdf')">Data ANalytics bye Microsoft & Linkedin</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/python.pdf')">Python for Data Science</button>
+        <button class="pdf-button" onclick="displayPDF('static/css/sql.pdf')">SQL for Data Science</button>
+    </div>
+    
+    <iframe id="pdf-frame" src="" allow="autoplay"></iframe>
+    
+    <script>
+        function displayPDF(pdfPath) {
+            document.getElementById('pdf-frame').src = pdfPath;
+        }
+    </script>
+
+{% endblock %}

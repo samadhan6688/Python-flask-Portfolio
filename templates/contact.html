@@ -1,0 +1,49 @@
+
+
+
+<!-- Start Contact -->
+{% extends 'index.html' %}
+{% block body %}
+
+
+<body></body>
+    <div class="card">
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='img/1692357119339.jpg') }}" alt="Your Image">
+        </div>
+        <div class="right-section">
+            <h5>JADHAV <span>SAMADHAN</span></h5>
+            <p class="title">Data Analyst and Python Developer</p>
+            <div class="contact-info">
+                <p><i class="fa fa-phone"></i> +91 7264896688</p>
+                <p><i class="fa fa-envelope"></i> samjadhav6688@gmail.com</p>
+                <p><i class="fa fa-globe"></i> Your Website</p>
+                <p><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/samadhan-jadhav-b14032247/">Linkedin</a></p>
+                <p><i class="fa fa-home"></i> Indapur Pune Maharashtra</p>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <div class="message-box">
+        <h2>Contact Me</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="mobile">Mobile No:</label>
+            <input type="text" id="mobile" name="mobile" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+
+
+
+{% endblock %}
+    <!-- End Contact -->

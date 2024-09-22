@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block body %}
+
+
+
+    <body>
+        <div class="container2">
+            <h6>MY RESUME</h6>
+            <div class="buttons">
+                <button class="button display-button" onclick="displayResume()">Display</button>
+                <button class="button download-button" onclick="downloadResume()">Download</button>
+            </div>
+            <embed id="resume-viewer" src="" type="application/pdf">
+        </div>
+    
+        <script>
+            function displayResume() {
+                document.getElementById('resume-viewer').src = "{{ url_for('static', filename='css/samresume.pdf') }}"; // Replace with your PDF file path
+            }
+    
+            function downloadResume() {
+                window.location.href = "{{ url_for('static', filename='css/samresume.pdf') }}"; // Replace with your PDF file path
+            }
+        </script>
+    </body>
+{% endblock %}
